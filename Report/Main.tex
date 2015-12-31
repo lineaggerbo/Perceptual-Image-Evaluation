@@ -1,0 +1,43 @@
+\documentclass{report}
+
+\input{Config}
+
+\begin{document}\thispagestyle{empty}
+
+%-----------------------------------------------
+%	PROJECT INFORMATION
+%-----------------------------------------------
+
+\def \institution{Aarhus University}
+\def \subject{Research \& Development Project}
+\def \title {Perceptual Image Evaluation}
+\def \author{Line Aggerbo Johansen \\ 201302451}
+\def \supervisor{Christian Fischer Pedersen}
+
+%-----------------------------------------------
+%	PRE-CONTENT
+%-----------------------------------------------
+
+\include{Pre-content/Title-page-std}
+%\include{Pre-content/Abstract}
+\include{Pre-content/Contents}
+
+%-----------------------------------------------
+%	CHAPTERS
+%-----------------------------------------------
+
+\pagenumbering{arabic}
+\include{Chapters/Introduction/Introduction}
+\include{Chapters/AssessmentTechniques/AssessmentTechniques}
+\include{Chapters/Design/Design}
+\include{Chapters/Implementation/Implementation}
+\include{Chapters/ConcludingRemarks/ConcludingRemarks}
+
+%-----------------------------------------------
+%	POST-CONTENT
+%-----------------------------------------------
+
+\bibliographystyle{plain}
+\bibliography{Bibliography}
+
+\end{document}
