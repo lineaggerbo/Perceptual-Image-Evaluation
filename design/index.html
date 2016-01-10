@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+	<!-- Metadata -->
+	<title>Image Quality Evaluation</title>
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'> 
+	<link rel="stylesheet" type="text/css" href="vendor/jquery-ui/jquery-ui.css">
+	<link href="css/style.css" rel="stylesheet">
+
+</head>
+<body>
+	<div id="container">
+		<div id="scene-information">
+			<p>Image Quality Evaluation</p>
+			<p><span>Scene:</span> 1/5</p>
+		</div>
+		<div id="image-box">
+			<div id="tabs">
+				<div id="tab-ref" class="tab-content tab-current">
+					<div class="img">
+						<img src="img/1.jpg" alt="Image1">
+					</div>
+					<div class="rating">
+						<input class="score" id="score-1" type="text" readonly>
+						<div class="slider" id="slider-1"></div>
+						<ul>
+							<li>Excellent</li>
+							<li>Good</li>
+							<li>Fair</li>
+							<li>Poor</li>
+							<li>Bad</li>
+						</ul>
+					</div>
+				</div>
+				<div id="tab-1" class="tab-content">
+					<div class="img">
+						<img src="img/2.jpg" alt="Image2">
+					</div>
+					<div class="rating">
+						<input class="score" id="score-1" type="text" readonly>
+						<div class="slider" id="slider-1"></div>
+						<ul>
+							<li>Excellent</li>
+							<li>Good</li>
+							<li>Fair</li>
+							<li>Poor</li>
+							<li>Bad</li>
+						</ul>
+					</div>
+				</div>
+				<div id="tab-2" class="tab-content">
+					<div class="img">
+						<img src="img/3.jpg" alt="Image3">
+					</div>
+					<div class="rating">
+						<input class="score" id="score-1" type="text" readonly>
+						<div class="slider" id="slider-1"></div>
+						<ul>
+							<li>Excellent</li>
+							<li>Good</li>
+							<li>Fair</li>
+							<li>Poor</li>
+							<li>Bad</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div id="navigation">
+				<ul>
+					<li class="button tab-link button-current" data-tab="tab-ref">Reference<div class="navigation-score">x</div></li>
+					<li class="button tab-link" data-tab="tab-1">A<div class="navigation-score">x</div></li>
+					<li class="button tab-link" data-tab="tab-2">B<div class="navigation-score">x</div></li>
+				</ul>
+				<a href="2.html" class="button next-scene button-disabled">Next scene</a>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="vendor/jquery/jquery.js"></script>
+<script type="text/javascript" src="vendor/jquery-ui/jquery-ui.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
