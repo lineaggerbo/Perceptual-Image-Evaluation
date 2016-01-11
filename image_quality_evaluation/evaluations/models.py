@@ -22,5 +22,5 @@ class Image(models.Model):
 class Rating(models.Model):
 	observer = models.ForeignKey(Observer, on_delete = models.CASCADE)
 	image = models.ForeignKey(Image, on_delete = models.CASCADE)
-	dateTime = models.DateTimeField(blank = True, name = 'date rated')
-	rating = models.IntegerField(default = 0)
+	dateTime = models.DateTimeField(blank = True, name = 'date_rated')
+	score = models.IntegerField(default = 0)

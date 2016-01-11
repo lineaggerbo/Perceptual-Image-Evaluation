@@ -47,16 +47,19 @@
 
 	</div>
 	<div id="navigation">
+		<form action="{% url 'evaluations:rate' scene_id %}" method="post">
+		{% csrf_token %}
 		<ul>
-			<li class="button tab-link button-current" data-tab="tab-ref">Reference<div class="navigation-score">x</div></li>
+			<li class="button tab-link button-current" data-tab="tab-ref">Reference<input class="navigation-score" name="score-{{scene_reference_image.id}}" value="x"/></li>
 			{% for image in scene_image_list %}
-			<li class="button tab-link" data-tab="tab-{{image.id}}">{{ forloop.counter|to_char }}<div class="navigation-score">x</div></li>
+			<li class="button tab-link" data-tab="tab-{{image.id}}">{{ forloop.counter|to_char }}<input class="navigation-score" name="score-{{image.id}}" value="x"></li>
 			{% endfor %}
 		</ul>
+
 		{% if last_scene %}
-		<a href="/evaluations/end/" class="button next-scene button-disabled">End evaluation</a>
+		<input type="submit" class="button next-scene button-disabled" value="End evaluation"/>
 		{% else %}
-		<a href="/evaluations/{{ next_scene_id }}" class="button next-scene button-disabled">Next scene</a>
+		<input type="submit" class="button next-scene button-disabled" value="Next scene"/>
 		{% endif %}
 	</div>
 </div>

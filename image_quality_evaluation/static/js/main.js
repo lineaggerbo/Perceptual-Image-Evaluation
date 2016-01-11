@@ -54,7 +54,7 @@ $(document).ready(function(){
       value: 50,
       slide: function(event, ui){
         $(this).parent().find('.score').val(ui.value);
-        $('#navigation ul li[data-tab='+tab_current+'] div').text(ui.value);
+        $('#navigation ul li[data-tab='+tab_current+'] input').val(ui.value);
         $('#navigation ul li[data-tab='+tab_current+']').addClass('scored');
         checkAllInput();
       }
