@@ -4,8 +4,8 @@ from django.db import models
 # Create your models here.
 class Observer(models.Model):
 	name = models.CharField(max_length = 100)
-	startTime = models.DateTimeField(blank = True, name = 'evaluation started')
-	endTime = models.DateTimeField(blank = True, name = 'evaluation ended')
+	startTime = models.DateTimeField(null = True, name = 'evaluation_started')
+	endTime = models.DateTimeField(null = True, name = 'evaluation_ended')
 
 	def __str__(self):
 		return str(self.name)

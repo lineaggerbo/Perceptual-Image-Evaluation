@@ -1,6 +1,8 @@
 from django.http import HttpResponse
 from .models import Image
+from .models import Observer
 from django.template import loader
+from datetime import datetime
 
 
 def index(request):
