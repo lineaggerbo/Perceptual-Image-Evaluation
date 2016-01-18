@@ -3,5 +3,43 @@
 %-------------------------------------------------------------------------------
 
 \chapter{Implementation}
+\label{cha:implementation}
 
-\section{Section heading}
+% chapter  (end)
+The three parts of the web application; model, template and view is implemented with respect to the design choices made in \autoref{cha:design}. The final implementation of the web application will be presented in this chapter.
+
+The template is implemented in the languages HTML, CSS, and JavaScript. HyperText Markup Language (HTML) describes the elements which form the building blocks of the template. The Cascading Style Sheet (CSS) sets the visual style of the building blocks including aspects such as colors and fonts. JavaScript is used to manipulate the HTML elements. In this application JavaScript allows for each scene to contain multiple images while only presenting one at a time. A screen shot of the final template is shown in \autoref{fig:template_screenshot}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = \columnwidth]{Img/implementation.jpg}
+	\caption{Screenshot of web application. The image for evaluation has not been modified and is a random nature image \cite{wallpapers_craft}.}
+	\label{fig:template_screenshot}
+\end{figure}
+
+The web application is implemented such that the number of images in every scene is dynamic. Each scene might contain up to 10 images which is the maximum number of images for a scene in SAMVIQ \cite{Kozamernik2005}.
+
+Noteworthy features of the template is among others that the button which links to next scene is disabled until all images are rated as the SAMVIQ process states \cite{Street}. Another feature is that the rating score is shown dynamically above the slider and below the corresponding button.
+
+The result of the implemented model is shown in \autoref{fig:observer_table}, \autoref{fig:image_table}, and \autoref{fig:rating_table}. The database can be investigated using the free database browser 'SQLite Browser'\cite{sqlite_browser}. The information in the shown figures is dummy data created during the application test phase.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = \columnwidth]{Img/evaluations_observer.jpg}
+	\caption{List of information about all observers in the Observer table.}
+	\label{fig:observer_table}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = \columnwidth]{Img/evaluations_image.jpg}
+	\caption{List of information about all images in the Image table.}
+	\label{fig:image_table}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = \columnwidth]{Img/evaluations_rating.jpg}
+	\caption{List of information about all rating in the Rating table.}
+	\label{fig:rating_table}
+\end{figure}
