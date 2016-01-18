@@ -1,0 +1,23 @@
+%!TEX root = ../../Main.tex
+\graphicspath{{Chapters/Appendices/}}
+%-------------------------------------------------------------------------------
+
+\chapter{Installation guide} % (fold)
+\label{cha:installation_guide}
+
+The SAMVIQ web application is build using the Django framework. This is an installation guide providing instructions on how to install the required dependencies along with the actual web application.
+
+\vspace{3mm}
+\begin{enumerate}[label={\textbf{Step~\arabic*:}} ,leftmargin=47pt, labelsep=4mm]
+  \item The first step is to install Python. The documentation of Django specifies the version of Python to be 3.4 or later. It is beneficial to use Anaconda for the Python installation. Anaconda is a free Python distribution which includes more than 300 of the most popular Python libraries and can be installed from the Anaconda homepage: \url{https://www.continuum.io/downloads}.
+
+  \item Next the Django framework must be installed. This is done using the package management system 'pip' which is included in the Anaconda distribution. To install Django 1.9.1 (latest version) with 'pip' the command \texttt{pip install Django==1.9.1} is written in the terminal.
+
+  \item The SAMVIQ web application can be cloned from GitHub using the following command from the terminal:\\ \texttt{git clone https://github.com/lineaggerbo/SAMVIQ.git}.
+
+  \item To validate that all dependencies have been installed correctly the command \texttt{python manage.py runserver} is run from the folder. If the page \texttt{127.0.0.1:8000} can be accessed successfully the installation is completed.  
+
+\end{enumerate}
+\vspace{3mm}
+
+% chapter installation_guide (end)

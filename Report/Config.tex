@@ -25,6 +25,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{verbatim}
+\usepackage{enumitem}
 
 % Define colors
 \definecolor{Blue}{RGB}{56,85,96}			
@@ -65,7 +66,6 @@ margin=1cm}
 \frenchspacing 								% Reduces space after periods to make text more compact
 \raggedbottom 								% Makes all pages the height of the text on that page
 \allsectionsfont{\sffamily\color{Blue}}		% Change all section heading to sans serif
-\renewcommand{\chaptername}{}				% Hide the word "chapter"
 
 % Remove page number from the first page of chapters
 \makeatletter
@@ -83,8 +83,9 @@ margin=1cm}
 \titlespacing{\chapter}{0pt}{*-12}{*10}
 \titleformat{\chapter}[display]
     {\bfseries\sffamily\huge\color{Blue}}
-    {\flushright\Huge\thechapter}{20pt}{\bfseries\sffamily\color{Blue}\uppercase}
+    {\flushright\Large\chaptertitlename \ \ \Huge\thechapter}{20pt}{\bfseries\sffamily\color{Blue}\uppercase}
     []
+\renewcommand{\chaptername}{}				% Hide the word "chapter"
 
 % TOC: Aesthetic spacing redefines that look nicer to me than the defaults.
 \setlength{\cftbeforechapskip}{3ex}
